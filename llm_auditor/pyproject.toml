@@ -1,0 +1,11 @@
+[project]
+name = "llm_auditor"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "dotenv>=0.9.9",
+    "google-adk>=1.16.0",
+    "google-genai>=1.43.0",
+]

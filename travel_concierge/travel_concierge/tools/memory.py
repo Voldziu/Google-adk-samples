@@ -18,6 +18,7 @@ from datetime import datetime
 import json
 import os
 from typing import Dict, Any
+from pathlib import Path
 
 from google.adk.agents.callback_context import CallbackContext
 from google.adk.sessions.state import State
@@ -25,9 +26,14 @@ from google.adk.tools import ToolContext
 
 from travel_concierge.shared_libraries import constants
 
-SAMPLE_SCENARIO_PATH = os.getenv(
-    "TRAVEL_CONCIERGE_SCENARIO", "travel_concierge/profiles/itinerary_empty_default.json"
+BASE_DIR = Path(__file__).parent.parent  # /app/agents/travel_concierge/ DOCKER
+
+scenario_path = os.getenv(
+    "TRAVEL_CONCIERGE_SCENARIO", 
+    "profiles/itinerary_empty_default.json"
 )
+
+SAMPLE_SCENARIO_PATH = str(BASE_DIR / scenario_path)
 
 
 def memorize_list(key: str, value: str, tool_context: ToolContext):

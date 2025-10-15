@@ -12,6 +12,6 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from .agent import root_agent
+"""LLM Auditor for verifying & refining LLM-generated answers using the web."""
 
-__all__ = ["root_agent"]
+from . import agent

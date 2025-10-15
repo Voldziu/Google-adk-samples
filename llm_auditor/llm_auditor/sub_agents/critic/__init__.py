@@ -12,6 +12,6 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from .agent import root_agent
+"""Critic agent for identifying and verifying statements using search tools."""
 
-__all__ = ["root_agent"]
+from .agent import critic_agent
