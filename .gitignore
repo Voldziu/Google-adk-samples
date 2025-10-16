@@ -5,3 +5,7 @@ temp/
 __pycache__/
 .venv/
 .mypy_cache/
+*.egg-info
+gcloud_deploy/*
+!gcloud_deploy/main.py
+!gcloud_deploy/dockerfile

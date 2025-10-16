@@ -14,7 +14,9 @@
 
 """Demonstration of Travel AI Conceirge using Agent Development Kit"""
 
+import os
 from google.adk.agents import Agent
+from dotenv import load_dotenv
 
 from travel_concierge import prompt
 
@@ -27,9 +29,10 @@ from travel_concierge.sub_agents.pre_trip.agent import pre_trip_agent
 
 from travel_concierge.tools.memory import _load_precreated_itinerary
 
+load_dotenv()
 
 root_agent = Agent(
-    model="gemini-2.5-flash",
+    model=os.getenv("MODEL", "gemini-2.5-flash"),
     name="root_agent",
     description="A Travel Conceirge using the services of multiple sub-agents",
     instruction=prompt.ROOT_AGENT_INSTR,
