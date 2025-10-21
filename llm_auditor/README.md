@@ -8,7 +8,7 @@ Proponuję:
 
 
 
-docker build -t {nazwa}:latest
+docker build -t {nazwa}:latest .
 
 gcloud auth configure-docker europe-west3-docker.pkg.dev
 
