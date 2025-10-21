@@ -4,6 +4,7 @@
 
 # Name it accordingly to your agents
 AGENTS=("rag" "llm_auditor" "marketing_agency" "travel_concierge" "short_movie")
+#AGENTS=("llm_auditor")
 
 ENV_VARS=""
 
@@ -27,12 +28,12 @@ echo $ENV_VARS
 
 SERVICE_NAME=adk-demo-mikolaj
 
-gcloud run deploy $SERVICE_NAME \
-    --source gcloud_deploy/ \
-    --region "$GOOGLE_CLOUD_LOCATION" \
-    --project "$GOOGLE_CLOUD_PROJECT" \
-    --set-env-vars="$ENV_VARS"
+# gcloud run deploy $SERVICE_NAME \
+#     --source gcloud_deploy/ \
+#     --region "$GOOGLE_CLOUD_LOCATION" \
+#     --project "$GOOGLE_CLOUD_PROJECT" \
+#     --set-env-vars="$ENV_VARS"
 
-gcloud run services update $SERVICE_NAME \
-    --service-account=$SERVICE_ACCOUNT \
-    --region=$GOOGLE_CLOUD_LOCATION
+# gcloud run services update $SERVICE_NAME \
+#     --service-account=$SERVICE_ACCOUNT \
+#     --region=$GOOGLE_CLOUD_LOCATION
