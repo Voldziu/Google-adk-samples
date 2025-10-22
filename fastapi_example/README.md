@@ -23,3 +23,23 @@ Body:
   "timeout": 300,
   "memory": "1Gi"
 }
+
+
+/test-run-sse
+
+
+{
+  "agent_url": "https://adk-demo-llm-auditor-1761122677-253000858657.europe-west3.run.app",
+  "runsse_body":{
+  "appName": "llm_auditor",
+  "userId": "user",
+  "sessionId": "ace8d67d-59f3-48cc-8995-2f966dbdbdfa",
+  "newMessage": {
+    "role": "user",
+    "parts": [{"text": "Who was in Paris? Accoring to Kanye West"}]
+  },
+  "streaming": false,
+  "stateDelta": null
+},
+  "timeout": 30
+}

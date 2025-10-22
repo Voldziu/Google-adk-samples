@@ -10,3 +10,4 @@ gcloud_deploy/*
 !gcloud_deploy/main.py
 !gcloud_deploy/dockerfile
 AdamRepo/
+*/deploy-push.sh

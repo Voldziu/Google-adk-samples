@@ -1,7 +1,9 @@
-gcloud run deploy deployer-service \
-  --image=YOUR_IMAGE \
+gcloud run deploy adk-demo-fastapi-server \
+  --image=europe-west3-docker.pkg.dev/acn-daipl/adk-demo/adk-demo-fastapi-server:latest \
   --region=europe-west3 \
-  --service-account=SERVICE_ACCOUNT_WITH_CLOUD_RUN_ADMIN_ROLE
+  --service-account=genai-assest-backend@acn-daipl.iam.gserviceaccount.com \
+  --network=vpc-notebook-fraknfurt \
+  --subnet=vpc-sub-frankfurt-cloud-run
 
 
 
